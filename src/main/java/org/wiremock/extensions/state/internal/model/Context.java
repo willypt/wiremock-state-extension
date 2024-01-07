@@ -15,12 +15,13 @@
  */
 package org.wiremock.extensions.state.internal.model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Context {
+public class Context implements Serializable {
 
     private final String contextName;
     private final Map<String, String> properties = new HashMap<>();
