@@ -15,9 +15,9 @@
  */
 package org.wiremock.extensions.state.internal.model;
 
-import java.util.function.Consumer;
+import java.io.Serializable;
 
-public class Transaction {
+public class Transaction implements Serializable {
     private final String contextName;
     private Boolean writeRecorded = false;
 

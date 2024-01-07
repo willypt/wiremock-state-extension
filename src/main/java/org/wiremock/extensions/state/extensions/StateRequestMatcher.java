@@ -139,6 +139,7 @@ public class StateRequestMatcher extends RequestMatcherExtension implements Stat
     }
 
     String renderTemplate(Object context, String value) {
+        logger().info("Render Template for context", context.toString() + "---~~~---" + value);
         return templateEngine.getUncachedTemplate(value).apply(context);
     }
 
